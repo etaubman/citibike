@@ -1,0 +1,11 @@
+Fact Table
+PK, Time_ID, Station_ID, Available_Bikes, Available_Docks, Total_Docks, Status_Key
+
+Time Table
+PK, Unix_Time, Weather_Fields{..}
+
+Station_Table
+
+
+Unix_Dimensions
+PK, Hour, Day of Week, 
