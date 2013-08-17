@@ -119,10 +119,18 @@ function initialize() {
         }, 3000);
     });
     window.heatmap = new HeatmapOverlay(map, {
-        "radius":25,
+        "radius":15,
         "visible":true, 
         "opacity":30
     });
+
+    stations = new google.maps.FusionTablesLayer({
+        query: {
+          select: "'latitude'",
+          from: "15G5xVRmNg-ArldOCxTGRfnxhzjOVGpb4Soqja_Q"
+        },
+        map: map
+      });
 
     google.maps.event.addListenerOnce(map, "idle", function(){
         animate();
